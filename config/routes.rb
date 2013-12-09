@@ -1,6 +1,8 @@
 Timetracker::Application.routes.draw do
 
-  root :to => "static_pages#home"
+  devise_scope :user do
+    root :to => "static_pages#home"
+  end
 
   devise_for :users
 
