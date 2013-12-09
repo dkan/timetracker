@@ -10,4 +10,6 @@ Timetracker::Application.routes.draw do
     root :to => "static_pages#home"
   end
 
+  resources :projects
+  resources :work_sessions
 end

@@ -1,0 +1,18 @@
+<h1>Add Project</h1>
+<div class="errors">
+  <% if flash[:error] %>
+    <% flash[:error].each do |e| %>
+      <p><%= e %></p>
+    <% end %>
+  <% end %>
+</div>
+
+<%= form_for @project do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :name %><br />
+
+  <%= f.label :rate %>:
+  <%= f.number_field :rate %><br />
+
+  <%= f.submit %>
+<% end %>
