@@ -79,6 +79,7 @@ Timetracker::Application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   # Sendgrid
+  config.action_mailer.default_url_options = { :host => 'rocky-mesa-6525.herokuapp.com' }
   ActionMailer::Base.smtp_settings = {
     :user_name => ENV['SENDGRID_USERNAME'],
     :password => ENV['SENDGRID_PASSWORD'],
