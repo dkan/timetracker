@@ -1,0 +1,18 @@
+<table>
+  <tr>
+    <th>date</th>
+    <th>project</th>
+    <th>hours</th>
+    <th>rate</th>
+    <th>total</th>
+  </tr>
+  <% @work_sessions.each do |ws| %>
+    <tr>
+      <td><%= ws.created_at.localtime.strftime('%m-%d-%Y') %></td>
+      <td><%= ws.project.name %></td>
+      <td><%= ws.hours %></td>
+      <td>$<%= ws.project.rate %></td>
+      <td>$<%= ws.hours *  ws.project.rate %></td>
+    </tr>
+  <% end %>
+</table>

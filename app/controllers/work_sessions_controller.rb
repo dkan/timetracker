@@ -1,7 +1,7 @@
 class WorkSessionsController < ApplicationController
 
   def index
-
+    @work_sessions = WorkSession.all
   end
 
   def show
