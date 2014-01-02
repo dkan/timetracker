@@ -1,7 +1,7 @@
 class WorkSessionsController < ApplicationController
 
   def index
-    @work_sessions = WorkSession.all
+    @work_sessions = WorkSession.all.order(created_at: :desc)
   end
 
   def show

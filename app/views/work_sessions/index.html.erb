@@ -12,7 +12,7 @@
       <td><%= ws.project.name %></td>
       <td><%= ws.hours %></td>
       <td>$<%= ws.project.rate %></td>
-      <td>$<%= ws.hours *  ws.project.rate %></td>
+      <td>$<%= ws.hours * ws.project.rate if ws.finish %></td>
     </tr>
   <% end %>
 </table>
